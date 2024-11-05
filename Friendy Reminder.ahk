@@ -54,13 +54,14 @@ reminders := [
     "Warning: An open laptop invites the curious to rewrite your story.",
     "Warning: Remember, curiosity killed the laptop!"
     "Warning: These, were AI generated."
+    "Warning: You can close it with task manager... but it'll always come back!"
 ]
-
 
 Timer_Start()
 
 Timer_Start() {
     SetTimer(Hour_Timer, Random(1800000, 3600000)) ; 30 to 60 minutes
+    ;SetTimer(Hour_Timer, Random(5000, 1000)) ; 5 to 10 Secons
 }
 
 Hour_Timer() {
