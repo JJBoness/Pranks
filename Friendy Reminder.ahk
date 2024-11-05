@@ -57,16 +57,71 @@ reminders := [
     "Warning: You can close it with task manager... but it'll always come back!"
 ]
 
+file_names := [
+    "Important_Math_Stuff.docx",
+    "TotallyNotAVirus.exe",
+    "Delete_This_Immediately.txt",
+    "Please_Read_Me.pdf",
+    "Very_Important_Info.jpg",
+    "Final_Final_Final.docx",
+    "Do_Not_OpenThis!.docx",
+    "Mystery_Solved.pptx",
+    "TopSecret_Passwords.txt",
+    "My_Life_Savings.xlsx",
+    "If_Found_Call.docx",
+    "Evidence.doc",
+    "You_Are_Watched.txt",
+    "Random_Confession.doc",
+    "Open_Me_First!!.doc",
+    "Secret_Project.ppt",
+    "Oops_Ignore_This.pdf",
+    "Totally_Legit_File.exe",
+    "Random_Project.docx",
+    "Private_Info.txt",
+    "To_Do_List.xlsx",
+    "Last_Will.doc",
+    "Homework_Not_Finished.pdf",
+    "Petition_For_Chocolate.docx",
+    "My_Passwords.txt",
+    "Do_Not_Delete!!.exe",
+    "Confidential_Document.pdf",
+    "Fake_Evidence.ppt",
+    "Oh_No!.txt",
+    "Backup_of_Backup.bak",
+    "Not_Suspicious.jpg",
+    "Undercover_Agenda.docx",
+    "Hidden_Secrets.pptx",
+    "Personal_Diary.doc",
+    "Super_Important.docx",
+    "Forbidden_Knowledge.txt",
+    "Just_A_Normal_File.txt",
+    "Private_Notes.doc",
+    "The_Meaning_Of_Life.doc",
+    "Error_Report.exe",
+    "Final_Answer.pptx",
+    "Help_Me.doc",
+    "Totally_Harmless.txt",
+    "Serious_Info.pdf",
+    "Secret_Lair_Location.txt",
+    "DonotReadThis.docx",
+    "Unfinished_Business.doc",
+    "Nothing_To_See_Here.pdf",
+    "TheTruth.doc",
+    "Weird_Math_Problem.xls",
+    "Mystery_Document.doc"
+]
+
+
 Timer_Start()
 
 Timer_Start() {
-    SetTimer(Hour_Timer, Random(1800000, 3600000)) ; 30 to 60 minutes
-    ;SetTimer(Hour_Timer, Random(5000, 1000)) ; 5 to 10 Secons
+    ;SetTimer(Hour_Timer, Random(1800000, 3600000)) ; 30 to 60 minutes
+    SetTimer(Hour_Timer, Random(5000, 1000)) ; 5 to 10 Secons
 }
 
 Hour_Timer() {
     MsgBox(reminders[Random(1, reminders.Length)], "Errors have occurred", 262192)
+
+    FileAppend("", A_Desktop . "\" . file_names[Random(1, file_names.Length)])
     Timer_Start()
 }
-
-
