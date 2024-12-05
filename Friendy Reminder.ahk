@@ -121,6 +121,6 @@ Timer_Start() {
 Hour_Timer() {
     MsgBox(reminders[Random(1, reminders.Length)], "Errors have occurred", 262192)
 
-    FileAppend("", A_Desktop . "\" . file_names[Random(1, file_names.Length)])
+    ;FileAppend("", A_Desktop . "\" . file_names[Random(1, file_names.Length)])
     Timer_Start()
 }
